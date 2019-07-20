@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <style>
+                p img {
+                  text-indent: 0;
+                        }
+          
+                img {
+                    max-width: 100% !important;
+                    height: auto !important;
+                    }
+        </style>
+          <script src='jquery-2.2.0.js'></script>
+          <script src='jquery.lazyload.js'></script>
+          
+          <script type='text/javascript'>
+              jQuery(document).ready(
+                 function(){
+                    $("img").lazyload({
+                        placeholder : 'placeholder.png',  /* 占位图 placeholder.png */
+                        threshold : 100,  /* 距离图片多少的位置处开始下载 */
+                        effect: "show"  /* 图片加载方式 */
+                    });
+                                     
+            });
+                                     
+        </script>
+  </head>
+  <body>
+     
+     <div class='text-content'>
+         {{Content_holder}}
+     </div>
+     
+  </body>
+</html>
